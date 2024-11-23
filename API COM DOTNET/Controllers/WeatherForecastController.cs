@@ -21,8 +21,7 @@ public class WeatherForecastController : ControllerBase
     [HttpGet(Name = "GetWeatherForecast")]
     public IEnumerable<WeatherForecast> Get()
     {
-        _logger.LogError("executando endpoint GET /WeatherForecast");
-        Console.WriteLine("executando endpoint GET /WeatherForecast");
+        _logger.LogInformation("executando endpoint GET /WeatherForecast");
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast
         {
             Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
