@@ -3,7 +3,9 @@
 namespace API_COM_DOTNET.Models;
 
 public class Filme
-{
+{   
+    public int Id { get; set; }
+
     [Required(ErrorMessage = "O titulo deve ser obrigatorio e deve ter no maximo 300 caracteres(incluindo as virgulas).")]
     [MaxLength(300, ErrorMessage = "O titulo deve ter no maximo 300 caracteres(incluindo as virgulas).")]
     public string Titulo { get; set; }
